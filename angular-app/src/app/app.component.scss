@@ -1,0 +1,36 @@
+:host {
+  --text-black: #202124;
+  --text-gray: #474747;
+  --border-color: #dadce0;
+
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-base: 16px;
+  --font-size-large: 36px;
+
+  font-family: Arial, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica;
+  font-weight: normal;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: inherit;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}

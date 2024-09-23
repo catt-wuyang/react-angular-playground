@@ -1,0 +1,29 @@
+<div class="app-currency-component">
+  <div class="base-currency">1 USD exchanges</div>
+
+  <div class="exchange-currency">
+    {{ this.calculateCurrencyRate }} {{ this.selectedCurrency }}
+  </div>
+
+  <div class="update-date">
+    {{ this.currencyResponse?.lastUpdateTime }} update ·
+    <a href="https://www.exchangerate-api.com/">ExchangeRate-API</a>
+  </div>
+
+  <div class="currency-selection">
+    <div class="select-currency-rate">{{ this.calculateCurrencyRate }}</div>
+
+    <select
+      [(ngModel)]="selectedCurrency"
+      (change)="onSelectCurrency($event)"
+      class="select-currency"
+    >
+      <option
+        *ngFor="let currency of this.currencyResponse?.currencyOptions"
+        [value]="currency"
+      >
+        {{ currency }}
+      </option>
+    </select>
+  </div>
+</div>
